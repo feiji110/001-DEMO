@@ -1,12 +1,10 @@
-<span style="color:rgb(102,102,102);"><span style="font-size:18px;"><video id="video" controls="controls" preload="preload" poster="http://media.w3.org/2010/05/sintel/poster.png" >
-		<source id="mp4" src="http://media.w3.org/2010/05/sintel/trailer.mp4" type="video/mp4">
-		<source id="webm" src="http://media.w3.org/2010/05/sintel/trailer.webm" type="video/webm">
-		<source id="ogv" src="http://media.w3.org/2010/05/sintel/trailer.ogv" type="video/ogg">
-		Your user agent does not support the HTML5 Video element.
-</video>
-<audio controls="controls" preload="preload" autoplay="autoplay">
-		<source src="http://other.web.ra01.sycdn.kuwo.cn/resource/n3/128/17/55/3616442357.mp3" type="audio/mp3" >
-		您所用的浏览器不支持HTML5 audio标签。
+<iframe 
+    width="800" 
+    height="450" 
+    src="https://v.miaopai.com/iframe?scid=SvyHaHOczsp7B6ftW86oqMMz62-h5ai6~Fwp8A__"
+    frameborder="0" 
+    allowfullscreen>
+</iframe>
 
 1.世界上最先进的版本控制系统
 # 创建空目录
