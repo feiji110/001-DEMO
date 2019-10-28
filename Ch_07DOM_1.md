@@ -2,7 +2,7 @@
 ## Ch_07DOM
 > HTML与XML DOM是对核心DOM的补充。
 ### BrotherNodes&getElementById直接获取元素对象
-````js
+````html
 <!DOCTYPE html>
 <html lang="en">
 <!-- childNodes类数组集合：head,body,script -->
@@ -42,7 +42,7 @@ contianer.onclick = function(){
 </html>
 ````
 ###getElementsByClassName&&getElementsByTagName
-````js
+````html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -83,7 +83,7 @@ contianer.onclick = function(){
 </html>
 ````
 ### 得到节点集合，可以当作数组进行处理&&documentElement&&head&&body
-````js
+````html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -109,7 +109,7 @@ contianer.onclick = function(){
 </html>
 ````
 ### children&&childNodes
-````js
+````html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -136,7 +136,7 @@ contianer.onclick = function(){
 </html>
 ````
 ### previousSibling&&previousElementSibling&&parentNode
-````js
+````html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -181,7 +181,7 @@ contianer.onclick = function(){
 </html>
 ````
 ### Exercise1
-````js
+````html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -214,6 +214,29 @@ var second = document.getElementById("second");
 var first6 = second.previousElementSibling;
 </script>
 </html>
-###
-````js
+### innerHTML
+````html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p id = "p1" >
+        段落内容
+    </p>
+    
+</body>
+<script>
+    var p1 = document.getElementById("p1");
+    p1.onclick = function(){
+        // p1.innerHTML = "<h1>段落内容</h1>";
+        p1.innerHTML = "<img src='https://avatars3.githubusercontent.com/u/43982513?s=400&u=6942404b4850aed167129ffb11b198cf38d5d41b&v=4'/>";
+        }
+</script>
+</html>
+````
 
