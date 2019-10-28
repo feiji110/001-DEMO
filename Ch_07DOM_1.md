@@ -41,7 +41,7 @@ contianer.onclick = function(){
 </script>
 </html>
 ````
-###getElementsByClassName&&getElementsByTagName
+### getElementsByClassName&&getElementsByTagName
 ````html
 <!DOCTYPE html>
 <html lang="en">
