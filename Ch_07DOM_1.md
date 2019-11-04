@@ -240,4 +240,131 @@ var first6 = second.previousElementSibling;
 </script>
 </html>
 ````
+### getElementsByTagName&&getElementsByClassName&&getElementById
+````html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <ul id = "list">
+        <li class='bg'>香蕉</li>
+        <li class ='bg'>苹果</li>
+        <li class='bg'>橘子</li>
+    </ul>
+</body>
+<script >
+//根据id属性得到特定网页元素对应的DOM对象
+var list = document.getElementById("list");
+//根据网页元素的标记名得到DOM对象的集合（数组）
+var arr = list.getElementsByTagName("li");
+for(var i = 0; i < arr.length;i++){
+    arr[i].innerHTML += i; 
+}
+var arr1 = list.getElementsByClassName("bg");
+for (var j = 0;j<arr1.length;j++){
+    arr1[j].style.color = 'red';
+}
+
+//childElement.parentNode
+//firstElementChild children
+//lastElementChild childNodes
+</script>
+</html>
+````
+### innerText&&innerHTML
+````html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <ul id = "list">
+        <li class='bg'>香蕉</li>
+        <li class ='bg'>苹果</li>
+        <li class='bg'>橘子</li>
+    </ul>
+</body>
+<script >
+var list = document.getElementById("list");
+// 设置或获取前面DOM内部对象的HTML内容
+// list.innerHTML = '<h1>葡萄</h1>';
+//innerText设置的是DOM对象对应的网页元素标记内部的纯文本内容，不解析
+// list.innerText = "<h1>葡萄</h1>";
+console.log(list.innerText);
+// textContent 只有IE可以用，其他有兼容性
+</script>
+</html>
+````
+### getAttribute&&setAttribute&&removeAttribute
+````html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>19_11_04</title>
+    <style>
+    img{
+        height:100px;
+    }
+    .imgborder{
+        border:10px solid red;
+    }
+    #imgmargin{
+        margin-left: 200px;
+        margin-top: 100px;
+    }
+    </style>
+</head>
+<body>
+    <img src="logo.png" alt="logo">
+    <button id = 'btn1'>添加边框</button>
+    <button id = 'btn2'>去除边框</button>
+    <button id = 'btn3' >添加外边距</button>
+    <button id = 'btn4'>去除外边距</button>
+</body>
+<script >
+var imgList = document.getElementsByTagName("img");
+imgList[0].onclick = function(){
+    console.log(this.getAttribute("src"));
+    this.setAttribute("src","download.png");
+    console.log(this.src);
+}
+var btn1 = document.getElementById("btn1");
+btn1.onclick = function(){
+    this.previousElementSibling.setAttribute("class","imgborder");
+}
+var btn2 = document.getElementById("btn2");
+btn2.onclick = function(){
+    var isExist = this.parentNode.firstElementChild.hasAttribute("class");
+    // console.log(isExist);
+    if(isExist){
+        this.parentNode.firstElementChild.removeAttribute("class");
+    }else{
+        return;
+    } 
+}
+var btn3 = document.getElementById("btn3");
+btn3.onclick = function(){
+    this.parentNode.firstElementChild.setAttribute("id","imgmargin");
+}
+var btn4 = document.getElementById("btn4");
+btn4.onclick = function(){
+    var isExist = this.parentNode.firstElementChild.hasAttribute("id");
+    // console.log(isExist);
+    if(isExist){
+        this.parentNode.firstElementChild.removeAttribute("id");
+    }else{
+        return;
+    } 
+}
+</script>
+</html>
+````
+### 
+````html
 
