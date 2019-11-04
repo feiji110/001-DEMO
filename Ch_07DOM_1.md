@@ -214,6 +214,7 @@ var second = document.getElementById("second");
 var first6 = second.previousElementSibling;
 </script>
 </html>
+````
 ### innerHTML
 ````html
 <!DOCTYPE html>
