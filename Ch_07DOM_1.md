@@ -365,6 +365,94 @@ btn4.onclick = function(){
 </script>
 </html>
 ````
-### 
+### removeChild&&tbody
 ````html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        td{
+            width:60px;
+            padding:20px;
+        }
+    </style>
+    <title>191104_02</title>
+</head>
+<body>
+<table border = '1' id = 'tb1'>
+    <tr>
+        <td>
+            <button>删除本行1</button>
+        </td>
+        <td>
+
+        </td>
+        <td>
+
+        </td>
+        <td>
+
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button>删除本行2</button>
+        </td>
+        <td>
+
+        </td>
+        <td>
+
+        </td>
+        <td>
+
+        </td>
+    </tr>
+    <tr>
+        <td>
+        <button>删除本行3</button>
+        </td>
+        <td>
+
+        </td>
+        <td>
+
+        </td>
+        <td>
+
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button>删除本行4</button>
+        </td>
+        <td>
+
+        </td>
+        <td>
+
+        </td>
+        <td>
+
+        </td>
+    </tr>
+</table>
+</body>
+<script >
+    //1. 得到要操作的网页元素的DOM对象
+    //2. 进行事件的绑定
+    //3. 触发事件时的具体DOM操作，（网页元素结构修改样式修改）
+    var btnList = document.getElementsByTagName("button");
+    var tb1 = document.getElementById("tb1");
+    for(var i = 0; i < btnList.length;++i){
+        btnList[i].onclick = function(){
+            var trNode = this.parentNode.parentNode;
+            // tb1.removeChild(trNode);//因为tbody的解析存在
+            tb1.children[0].removeChild(trNode);
+        }
+    }
+</script>
+</html>
+````
 
