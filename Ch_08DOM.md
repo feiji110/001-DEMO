@@ -199,4 +199,36 @@ for (var i = 0; i < btnList.length; i++) {
 </body>
 </html>
 ````
-
+### 练习
+````html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo</title>
+    <style>
+     
+    </style>
+</head>
+<body>
+    <ul id = "fruit">
+        <li><a href="#">苹果</a> </li>
+        <li>香蕉</li>
+        <li>橘子</li>
+    </ul>
+</body>
+<script>
+//点击列表中列表项时，将列表项替换成<h3>菠萝</h3>
+var fruit = document.getElementById("fruit");
+var fruitList = fruit.children;
+for(var i = 0 ; i <fruitList.length;i++){
+    // console.log(fruitList[i]);
+    fruitList[i].onclick = function(){
+        var hNode = document.createElement("h3");
+        hNode.innerHTML = "菠萝";
+        fruit.replaceChild(hNode,this);
+    }
+}
+</script>
+</html>
+````
