@@ -173,4 +173,30 @@ for (var i = 0; i < btnList.length; i++) {
 </script>
 </html>
 ````
+### replaceChild(newNode,oldNode)
+````html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>newWindow</title>
+</head>
+<body>
+    <div id = "container">
+        <p id = "p1">
+            这是一个段落。
+        </p>
+    </div>
+    <script>
+        var container = document.getElementById("container");
+        var p1 = document.getElementById("p1");
+        var hNode = document.createElement("h3");
+        hNode.innerHTML = "这是一个标题";  
+        p1.onclick = function(){
+            container.replaceChild(hNode,p1);
+        }
+    </script>
+</body>
+</html>
+````
 
