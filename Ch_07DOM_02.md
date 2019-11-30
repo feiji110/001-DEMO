@@ -85,41 +85,7 @@ for(var i = 0; i < imgList.length;i++){
     console.log(list.nodeName,linkHref.nodeName,textNode.nodeName);
     console.log(list.nodeValue,linkHref.nodeValue,textNode.nodeValue);
 ````
-### demo
-````html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>newWindow</title>
-</head>
-<body>
-    <div  id = "container"">
-        <p>段落1</p>
-        <h3>标题1</h3>
-        <div>div1</div>
-        <p>段落2</p>
-        <h3>标题2</h3>
-        <div>div2</div>
-    </div>
-</body>
-<script>
-//通过container.children获取container内部段落和div标记内部的内容
-// ，存储到数组arr中，在控制台进行输出
-var container = document.getElementById("container");
-var childList = container.children;
-var arr = [];
-for(var i = 0; i<childList.length;i++){
-    var elName = childList[i].nodeName;
-    console.log(childList[i].nodeValue);
-    if(elName == "p" || elName == "DIV"){
-        arr.push(childList[i].innerHTML);
-    }
-}
-console.log(arr);
-</script>
-</html>
-````
+
 ### 雪梨教育作业
 ````html
 <!DOCTYPE html>
