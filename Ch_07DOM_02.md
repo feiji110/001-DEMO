@@ -72,7 +72,7 @@ for(var i = 0; i < imgList.length;i++){
 		result.innerHTML = eval(result.innerHTML);
 	}
 ````
-### 
+### nodeType&nodeValue&nodeName
 ````js
     //元素节点，属性节点，文本节点都可看作一个对象
     var list = document.getElementById("list");//元素节点的DOM对象
@@ -120,9 +120,7 @@ console.log(arr);
 </script>
 </html>
 ````
-
-
-
+### 雪梨教育作业
 ````html
 <!DOCTYPE html>
 <html lang="en">
