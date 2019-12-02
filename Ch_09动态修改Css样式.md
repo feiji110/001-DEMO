@@ -193,3 +193,53 @@ animate(container,{"width":1000,"height":400,"marginLeft":200},callback1);
 </script>
 </html>
 ````
+### 5.
+````html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>更新</title>
+    <style>
+        .bg{
+            height:200px;
+            width:200px;
+            background: red;
+            margin-left:50px;
+        }
+    
+    </style>
+</head>
+<body>
+    <div class = "bg" > </div>
+    <button id = "btn1">开始</button>
+    <button id = "btn2">停止</button>
+</body>
+<script>
+    // marginLeft,一点一点向左移动：setInterval引出透明度，高度；---由固定数值设置---渐变匀速动画
+    var bg = document.getElementsByClassName("bg")[0];//得到类数组遍历或者加索引得到单个
+    var btn1 = document.getElementById("btn1");
+    var btn2 = document.getElementById("btn2");
+    bg.style.marginLeft = getComputedStyle(bg)["marginLeft"];
+    // alert(bg.style.marginLeft);
+    // 定义全局变量
+    var intervalId;
+    btn1.onclick = function(){
+        // alert(bg.style.marginLeft)
+        intervalId = setInterval(function(){
+            if(parseInt(bg.style.marginLeft)>=200){
+                clearInterval(intervalId);
+                // return;
+             }
+            bg.style.marginLeft = (parseInt(bg.style.marginLeft)+1)+"px";//去掉单位
+        },30)
+        // if(parseInt(bg.style.marginLeft)>=200){
+        //     clearInterval(intervalId);
+        // }
+    }
+    btn2.onclick = function(){
+        clearInterval(intervalId);//不定义成全局的在其他函数获取不到
+    }
+</script>
+</html>
+````
