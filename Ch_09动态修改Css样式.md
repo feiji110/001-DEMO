@@ -272,6 +272,31 @@ animate(container,{"width":1000,"height":400,"marginLeft":200},callback1);
 </script>
 </html>
 ````
+
+### 兼容提取样式
+````js
+function getStyle(obj,attr){
+    if(obj.currentStyle){
+        return obj.currentStyle[attr];
+    }else{
+        return getComputedStyle(obj,null)[attr];
+    } 
+}
+````
+### 变速运动
+
+````js
+ var timer = setInterval(function(){
+     var now = parseInt(getStyle(box,'left'));
+     var speed = (333-now)/6;
+     speed = speed>0?Math.ceil(speed):Math.floor(speed);
+     if(now == 333){
+         clearInterval(timer)
+     }else{
+         box.style.left = now + speed + "px";
+     }
+ },30)
+ ````
 ### 事件对象
 ````js
 <script>
